@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import MealList from "./MealList";
 
 
+
 function App() {
   const [meal, setMeal] = useState(null);
   const [calories, setCalories] = useState("2000");
@@ -40,6 +41,7 @@ function App() {
         <input type="number" placeholder="Calories" onChange={handleChange} />
       </section>
       <button onClick={getMeal}>Get Meal Plan</button>
+      {meal && <MealList Meal={meal} />}
     </div>
   );
 }
