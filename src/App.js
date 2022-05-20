@@ -7,6 +7,7 @@ import MealList from "./MealList";
 import Greet from "./Greet";
 import Reset from "./Reset";
 import { Routes, Route, Link, Navigate} from "react-router-dom";
+import { Meal } from "./Meal";
 
 function App() {
   const [meal, setMeal] = useState([]);
@@ -50,14 +51,20 @@ function App() {
   })
 
   return (
-    <div>
+    <div className="flex">
+      <Greet />
       <section className="userData">
         <input type="number" placeholder="Calories" onChange={handleChange} />
-      </section>
-      <button onClick={getMeal}>Get Meal Plan</button>
+     
+      <button onClick={getMeal}>Get Meal Plan</button> <Reset />
       <MealList Meal={mealArr} />
-    <Greet />
-    <Reset />
+    </section>
+      <main>
+        <Routes>
+        <Route path="/" element={<Meal />} />
+        <Route path="/greet/" element={<Greet />} />
+          </Routes>
+      </main>
     
     
     
