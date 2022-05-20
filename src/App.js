@@ -10,7 +10,7 @@ import { Routes, Route, Link, Navigate} from "react-router-dom";
 
 function App() {
   const [meal, setMeal] = useState([]);
-  const [calories, setCalories] = useState(null);
+  const [calories, setCalories] = useState("2000");
 
   function handleChange(e) {
     setCalories(e.target.value);
@@ -56,7 +56,15 @@ function App() {
       </section>
       <button onClick={getMeal}>Get Meal Plan</button>
       <MealList Meal={mealArr} />
+    <Greet />
+    <Reset />
+    
+    
+    
     </div>
+
+
+
   );
 }
 
