@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import { Component } from "react";
 import React, { useState } from "react";
 import MealList from "./MealList";
+import Greet from "./Greet";
+import Reset from "./Reset";
+import { Routes, Route, Link, Navigate} from "react-router-dom";
 
 function App() {
   const [meal, setMeal] = useState([]);
