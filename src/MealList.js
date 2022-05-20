@@ -1,8 +1,19 @@
 import React from "react";
 import { Meal } from "./Meal";
 
-export default function MealList({meal}) {
-    const nutrients = meal.nutrients;
+export default function MealList(props) {
     
-    return <div>MealList</div>;
+
+    
+    return (
+       
+       
+       <main>
+        <section className= "nutrients">
+        <ul>
+            {props.Meal}
+        </ul>
+        </section>
+        </main>
+    );
 }
